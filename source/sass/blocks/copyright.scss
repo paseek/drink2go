@@ -1,0 +1,41 @@
+@use "global/variables.scss" as *;
+
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+.copyright__text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  text-decoration: none;
+  color: $basic-grey;
+  margin-right: 8px;
+}
+
+.copyright__link {
+  display: flex;
+  fill: $basic-grey;
+
+  &:hover {
+    color: $basic-primary;
+    fill: $basic-primary;
+  }
+
+  &:focus {
+    color: $basic-primary;
+    fill: $basic-primary;
+  }
+
+  &:active {
+    fill: $primary-darken;
+  }
+}

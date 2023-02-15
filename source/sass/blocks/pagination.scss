@@ -1,0 +1,161 @@
+@use "global/variables.scss" as *;
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+    padding-top: 60px;
+    padding-bottom: 120px;
+    margin: 0 -21px 0 0;
+  }
+}
+
+.pagination__list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 160px;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    gap: 20px;
+  }
+}
+
+.pagination__item {
+  margin-bottom: 5px;
+
+  &:not(:first-child) {
+    margin-left: 5px;
+  }
+}
+
+.pagination__button {
+  width: 40px;
+  min-height: 40px;
+  border: 0;
+  background-color: $basic-white;
+  cursor: pointer;
+  border-radius: 4px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 140px;
+    width: 140px;
+    font-family: inherit;
+  }
+
+  &:hover {
+    background-color: $primary-lighter;
+    color: $basic-white;
+  }
+
+  &:focus {
+    background-color: $primary-lighter;
+    outline: none;
+    color: $basic-white;
+  }
+
+  &:active {
+    background-color: $primary-darken;
+    color: $basic-white;
+  }
+
+  &:disabled {
+    background-color: $basic-grey;
+    color: $basic-white;
+  }
+}
+
+.pagination__button:hover .pagination__button-text,
+.pagination__button:focus .pagination__button-text,
+.pagination__button:active .pagination__button-text,
+.pagination__button:disabled .pagination__button-text {
+  color: $basic-white;
+}
+
+.pagination__button:hover.pagination__link--current,
+.pagination__button:focus.pagination__link--current,
+.pagination__button:active.pagination__link--current,
+.pagination__button:disabled.pagination__link--current {
+  display: none;
+}
+
+.pagination__button-disabled {
+  visibility: hidden;
+}
+
+.pagination__link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: $basic-primary;
+  text-decoration: none;
+  min-width: 40px;
+  min-height: 40px;
+  background-color: $basic-white;
+  padding: 8px 10px;
+  border-radius: 4px;
+  display: block;
+  text-align: center;
+
+  &--current {
+    font-weight: 600;
+    color: $basic-black;
+    background-color: transparent;
+    cursor: default;
+  }
+
+  &:not(.pagination__link--current):hover {
+    background-color: $primary-lighter;
+    color: $basic-white;
+  }
+
+  &:not(.pagination__link--current):focus {
+    background-color: $primary-lighter;
+    outline: none;
+    color: $basic-white;
+  }
+
+  &:not(.pagination__link--current):active {
+    background-color: $primary-darken;
+    color: $basic-white;
+  }
+
+  &:disabled {
+    background-color: $basic-grey;
+    color: $basic-white;
+  }
+}
+
+.pagination__button-text {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    display: block;
+    color: $basic-primary;
+  }
+}
+
+.pagination__icon {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.pagination__link--current .pagination__button-text {
+  display: none;
+}

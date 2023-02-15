@@ -1,0 +1,70 @@
+@use "global/variables.scss" as *;
+
+.catalog {
+  width: 100%;
+  background-color: $bg-grey;
+}
+
+.catalog__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+
+  @media (min-height: $tablet-width) {
+    padding-top: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 100px;
+  }
+}
+
+.catalog__title {
+  margin-bottom: 20px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 40px;
+  }
+}
+
+.catalog__filter-wrapper {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 318px 1011px;
+    grid-gap: 30px;
+    justify-content: center;
+    width: 1440px;
+  }
+}
+
+.catalog__filter {
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    margin-right: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 40px;
+    justify-content: start;
+  }
+}
+
+.catalog__pagination {
+  padding-top: 40px;
+  padding-right: 20px;
+  padding-bottom: 38px;
+  padding-left: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 70px;
+    padding-right: 0;
+    padding-bottom: 86px;
+    padding-left: 0;
+  }
+}

@@ -1,0 +1,17 @@
+@use "global/variables.scss" as *;
+
+.swiper {
+  position: static;
+}
+
+.swiper-button-disabled {
+  color: $basic-grey;
+}
+
+.swiper-wrapper.swiper-wrapper--nojs {
+  flex-direction: column;
+}
+
+.swiper-wrapper--nojs ~ .slider__button-wrapper {
+  display: none;
+}

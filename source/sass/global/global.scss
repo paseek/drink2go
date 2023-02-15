@@ -1,0 +1,95 @@
+@use "global/variables.scss" as *;
+
+body {
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: $basic-black;
+  background-color: $basic-white;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 320px;
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+    padding: 0 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+    padding: 0 40px;
+  }
+}
+
+.label {
+  font-weight: 700;
+  font-size: 12px;
+  color: $basic-primary;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 4px;
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+    padding: 0;
+  }
+}
+
+.title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 36px;
+
+  @media (min-width: 768px) {
+    font-size: 42px;
+    line-height: 64px;
+  }
+}
+
+.button {
+  color: $basic-white;
+  background-color: $basic-primary;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $primary-lighter;
+    outline: 0;
+  }
+
+  &:active {
+    background-color: $primary-darken;
+  }
+
+  &:disabled {
+    background-color: $basic-grey;
+  }
+}

@@ -1,0 +1,198 @@
+@use "global/variables.scss" as *;
+
+.filter__form {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    width: 728px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 318px;
+    justify-content: start;
+    flex-direction: column;
+  }
+}
+
+.filter__group {
+  border: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 24px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 30px;
+  }
+
+  &--range {
+    @media (min-width: $tablet-width) {
+      width: 220px;
+      margin-right: 22px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 318px;
+      margin-right: 0;
+    }
+  }
+
+  &--milk {
+    @media (min-width: $tablet-width) {
+      width: 214px;
+      margin-right: 36px;
+    }
+  }
+
+  &--country {
+
+    margin-bottom: 34px;
+
+    @media (min-width: $tablet-width) {
+      width: 202px;
+      margin-right: 0;
+      margin-bottom: 38px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+
+.filter__name {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 0;
+  margin-bottom: 22px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.filter__name-range {
+  margin-bottom: 32.5px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    margin-bottom: 28px;
+    margin-left: 14px;
+  }
+}
+
+.filter__list {
+  list-style-type: none;
+  padding: 0;
+  padding-left: 4px;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 2px;
+  }
+}
+
+.filter__item-radio,
+.filter__item-checkbox {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: $basic-black;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.filter__item-radio {
+  margin-bottom: 21px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 19px;
+  }
+}
+
+.filter__item-checkbox {
+  margin-bottom: 20px;
+}
+
+.filter__control {
+  display: block;
+  position: relative;
+}
+
+.filter__button-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 36px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    gap: 30px;
+    margin-bottom: 44px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 18px;
+  }
+}
+
+.filter__button {
+  width: 160px;
+  min-height: 45px;
+  font-family: "Montserrat", "Aria", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+  text-align: center;
+  color: $basic-white;
+  background: $basic-primary;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 148px;
+    min-height: 40px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 150px;
+  }
+}
+
+.filter__button-reset {
+  color: $basic-primary;
+  background: $basic-white;
+  border: 1px solid $basic-primary;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $basic-white;
+    background-color: $primary-lighter;
+    outline: 0;
+  }
+
+  &:active {
+    background-color: $primary-darken;
+  }
+
+  &:disabled {
+    background-color: $basic-grey;
+  }
+}
