@@ -156,19 +156,6 @@ function compileProject(done) {
   )(done);
 }
 
-function compileDevProject(done) {
-  gulp.parallel(
-    processMarkup,
-    processStyles,
-    processScripts,
-    optimizeVector,
-    createStack,
-    copyAssets,
-    optimizeImages,
-    createWebp
-  )(done);
-}
-
 // Clean
 
 function deleteBuild() {
@@ -179,16 +166,16 @@ export function buildProd(done) {
   isDevelopment = false;
   gulp.series(
     deleteBuild,
-    compileProject,
-    startServer,
-    watchFiles
+    compileProject
   )(done);
 }
 
 export function runDev(done) {
   gulp.series(
     deleteBuild,
-    compileDevProject
+    compileDevProject,
+    startServer,
+    watchFiles
   )(done);
 }
 
